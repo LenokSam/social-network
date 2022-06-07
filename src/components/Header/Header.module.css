@@ -1,0 +1,21 @@
+.header{
+  grid-area: h;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 30px;
+  height: 60px;
+  background-color: #262626;
+  align-items: center;
+}
+.logo{
+  color:#82b440;
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid
+}
+.title{
+  color:#82b440;
+  margin-right: 100px;
+  font-size: 30px;
+}

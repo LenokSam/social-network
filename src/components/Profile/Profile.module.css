@@ -1,0 +1,33 @@
+.wrapper{
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.avatar{
+  border-radius: 50%;
+  padding: 10px;
+  width: 100px;
+}
+.info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.name{
+  font-family: 'Gilroy', sans-serif;
+  color: #82b440;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+
+.login{
+  color: #6c757d;
+}
