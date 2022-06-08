@@ -1,0 +1,1 @@
+export const avatar:string ='https://1417094351.rsc.cdn77.org/articles/2142/2141368/thumbnail/small.gif?1'

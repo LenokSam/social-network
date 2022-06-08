@@ -1,8 +1,8 @@
 .wrapper{
-  background: #ffffff;
+  /*background: #ffffff;*/
   border-radius: 14px;
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
-  padding: 20px;
+  /*box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;*/
+  /*padding: 20px;*/
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -12,7 +12,7 @@
 .avatar{
   border-radius: 50%;
   padding: 10px;
-  width: 100px;
+  width: 150px;
 }
 .info{
   display: flex;

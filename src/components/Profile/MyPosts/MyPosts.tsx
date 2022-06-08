@@ -19,7 +19,10 @@ export const MyPosts: React.FC<MyPostsType>= ({posts}) => {
           avatar={p.avatar}
           id={p.id}
           text={p.text}
-          likes={p.likes}/>)
+          likes={p.likes}
+          key={p.id}/>)
+
+
       }
 
     </div>

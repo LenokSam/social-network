@@ -3,7 +3,12 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
   padding: 20px;
+  margin-top: 20px;
+  width: 500px;
 }
 
 .profileInfo {
@@ -11,7 +16,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 20px;
+  padding-left: 20px;
 }
 
 .theme {
@@ -29,6 +34,7 @@
 .avatar{
   border-radius: 50%;
   width: 60px;
+  height: 60px;
 }
 .main{
   padding-left: 70px;
