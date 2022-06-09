@@ -6,10 +6,16 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import {Profile} from './components/Profile/Profile';
 import {Dialogs} from './components/Dialogs/Dialogs';
 import {avatar} from './modules/profile/MyProfile';
+import {StateType} from './redux/stateType';
 
 
+type AppType = {
+  state: StateType
+}
 
-function App() {
+
+function App({state}: AppType) {
+
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -17,8 +23,12 @@ function App() {
 
         <NavBar/>
         <div className={'content'}>
-          <Route path={'/profile'} component={()=><Profile avatar={avatar} name={'Elena Samoilenka'} login={'lenok-sam'}/>}/>
-          <Route path={'/messages'} component={Dialogs}/>
+          <Route path={'/profile'}
+                 render={() => <Profile
+                   avatar={avatar}
+                   name={'Elena Samoilenka'}
+                   login={'lenok-sam'}/>}/>
+          <Route path={'/messages'} render={() => <Dialogs/>}/>
         </div>
 
 

@@ -38,12 +38,10 @@ const dialogsData: Array<DialogItemType> = [
 export const Dialogs = () => {
 
   const [dialogs, setDialogs] = useState<Array<DialogItemType>>(dialogsData)
-
+  const dialogsRender = dialogs.map(d => <Dialog dialog={d} key={d.id}/>)
   return (
     <div>
-      {
-        dialogs.map(d => <Dialog dialog={d} key={d.id}/>)
-      }
+      {dialogsRender}
     </div>
   );
 };
