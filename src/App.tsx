@@ -23,6 +23,10 @@ function App({state}: AppType) {
         <NavBar/>
         <div className={'content'}>
           <Route
+            path={'/'}
+            exact
+            render={() => <Profile profile={state.profile}/>}/>
+          <Route
             path={'/profile'}
             render={() => <Profile profile={state.profile}/>}/>
           <Route
