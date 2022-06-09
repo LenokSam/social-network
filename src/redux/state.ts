@@ -1,5 +1,4 @@
 import React from 'react';
-import {PostType} from '../components/Profile/MyPosts/Post/Post';
 import {v1} from 'uuid';
 import {StateType} from './stateType';
 

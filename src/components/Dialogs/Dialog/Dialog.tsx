@@ -13,7 +13,7 @@ export type DialogType ={
   dialog:DialogItemType
 }
 export const Dialog:React.FC<DialogType> = ({dialog}) => {
-  const {id,name, text, avatar, login} = dialog
+  const {name, text, avatar, login} = dialog
   return (
     <div className={s.dialog}>
 

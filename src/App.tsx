@@ -5,7 +5,6 @@ import {NavBar} from './components/NavBar/NavBar';
 import {BrowserRouter, Route} from 'react-router-dom';
 import {Profile} from './components/Profile/Profile';
 import {Dialogs} from './components/Dialogs/Dialogs';
-import {avatar} from './modules/profile/MyProfile';
 import {StateType} from './redux/stateType';
 
 
@@ -23,9 +22,12 @@ function App({state}: AppType) {
 
         <NavBar/>
         <div className={'content'}>
-          <Route path={'/profile'}
-                 render={() => <Profile profile={state.profile}/>}/>
-          <Route path={'/messages'} render={() => <Dialogs/>}/>
+          <Route
+            path={'/profile'}
+            render={() => <Profile profile={state.profile}/>}/>
+          <Route
+            path={'/messages'}
+            render={() => <Dialogs messages={state.messages}/>}/>
         </div>
 
 
