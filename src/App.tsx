@@ -24,10 +24,7 @@ function App({state}: AppType) {
         <NavBar/>
         <div className={'content'}>
           <Route path={'/profile'}
-                 render={() => <Profile
-                   avatar={avatar}
-                   name={'Elena Samoilenka'}
-                   login={'lenok-sam'}/>}/>
+                 render={() => <Profile profile={state.profile}/>}/>
           <Route path={'/messages'} render={() => <Dialogs/>}/>
         </div>
 
