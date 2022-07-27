@@ -5,7 +5,6 @@ export type PostType = {
   likes: number
   text: string
   theme: string
-
 }
 
 export type DialogItemType ={
@@ -29,7 +28,6 @@ export type ProfileDataType = {
 export type MessagesDataType = {
   dialogs: Array<DialogItemType>
 }
-
 
 export type StateType = {
   profile:ProfileDataType

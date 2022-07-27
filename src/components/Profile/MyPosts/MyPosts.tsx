@@ -1,15 +1,21 @@
-import React from 'react';
+import React, {ChangeEvent, LegacyRef, useState} from 'react';
 import s from './MyPosts.module.css'
 import {Post, PostType} from './Post/Post'
+import {useDispatch} from 'react-redux';
+import {addPostActionCreator} from '../../../redux/profileReducer';
 
 
-export type MyPostsType ={
-  posts:Array<PostType>
-
+export type MyPostsType = {
+  posts: Array<PostType>
+  updateNewPostText: (text: string) => void
+  addPost: () => void
+  newPostText: string
 }
 
-export const MyPosts: React.FC<MyPostsType>= ({posts}) => {
+export const MyPosts: React.FC<MyPostsType> = ({posts, updateNewPostText, addPost, newPostText}) => {
 
+  let dispatch = useDispatch()
+  const [text, setText] = useState<string>(newPostText)
 
   const postsRender = posts.map(p => <Post
     date={p.date}
@@ -21,8 +27,32 @@ export const MyPosts: React.FC<MyPostsType>= ({posts}) => {
     key={p.id}/>)
 
 
+  const onAddPost = () => {
+    addPost()
+  }
+
+  const onPostChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    updateNewPostText(e.currentTarget.value)
+  }
+
   return (
     <div className={s.postsWrapper}>
+      <h3>My posts</h3>
+      <div>
+        <div className={'row'}>
+          <div>
+            <textarea
+              onChange={onPostChange}
+              value={newPostText}
+            >
+
+            </textarea></div>
+          <div>
+            <button onClick={onAddPost}> addPost</button>
+          </div>
+        </div>
+      </div>
+
       {postsRender}
     </div>
   );

@@ -15,6 +15,7 @@ export type PostType = {
 export const Post: React.FC<PostType> = (
   {avatar, date, id, likes, text, theme}
 ) => {
+
   return (
     <div className={s.postsWrapper} key={id}>
       <img src={avatar} className={s.avatar} alt={'avatar'}></img>

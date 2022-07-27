@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import s from './NavBar.module.css'
 import {NavLink} from 'react-router-dom';
 import Icon, {IconType} from './icons/NavIcon';
+import {useDispatch} from 'react-redux';
+import {dialogsReducer, sendMessageCreator, updateNewMessageBodyCreator} from '../../redux/dialogsReducer';
 
 
 
@@ -40,6 +42,7 @@ export const NavBarLink: React.FC<NavBarLinkPropsType> = (
   {logo, name, path, setActiveNav, active, children}
    ) => {
 
+  let dispatch = useDispatch()
   let isActiveLink = active === path
   let classItem=isActiveLink ? `${s.nav__item} ${s.active}`:s.nav__item
   let classLink = isActiveLink ? `${s.nav__name} ${s.active__title}` : s.nav__name

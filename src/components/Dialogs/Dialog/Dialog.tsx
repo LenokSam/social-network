@@ -14,12 +14,13 @@ export type DialogType ={
 }
 export const Dialog:React.FC<DialogType> = ({dialog}) => {
   const {name, text, avatar, login} = dialog
+  const nameToRender=name.length>10 ? name.slice(0,10).trim() + '...' : name
   return (
     <div className={s.dialog}>
 
       <div className={s.owner}>
         <img src={avatar} alt={name} className={s.avatar}/>
-        <span className={s.name}>{name}</span>
+        <span className={s.name}>{nameToRender}</span>
         <span className={s.login}>@{login}</span>
       </div>
       <div className={s.text}>{text}</div>

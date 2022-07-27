@@ -1,18 +1,18 @@
 import React from 'react';
 import {v1} from 'uuid';
-import {StateType} from './stateType';
-
+import {PostType, StateType} from './stateType';
+import {rerenderEntireTree} from '../render';
 
 
 export const state: StateType = {
-  profile:{
-    userInfo:{
-      id:v1(),
-      name:'Elena Samoilenko',
+  profile: {
+    userInfo: {
+      id: v1(),
+      name: 'Elena Samoilenko',
       login: 'lenok-sam',
-      avatar:'https://1417094351.rsc.cdn77.org/articles/2142/2141368/thumbnail/small.gif?1'
+      avatar: 'https://1417094351.rsc.cdn77.org/articles/2142/2141368/thumbnail/small.gif?1'
     },
-    posts:[
+    posts: [
       {
         avatar: 'https://1417094351.rsc.cdn77.org/articles/2142/2141368/thumbnail/small.gif?1',
         date: '07.06.2022',
@@ -33,8 +33,8 @@ export const state: StateType = {
       }
     ]
   },
-  messages:{
-    dialogs:[
+  messages: {
+    dialogs: [
       {
         id: v1(),
         name: 'Griz',
@@ -64,6 +64,35 @@ export const state: StateType = {
         login: 'sanya'
       },
     ]
-  }
+  },
 
+}
+
+export const addPosts = (postMessage: string) => {
+  let newPost: PostType = {
+    avatar: 'https://1417094351.rsc.cdn77.org/articles/2142/2141368/thumbnail/small.gif?1',
+    date: '07.06.2022',
+    id: v1(),
+    likes: 512,
+    text: postMessage,
+    theme: 'React',
+
+  }
+  state.profile.posts.push(newPost)
+  rerenderEntireTree(state)
+}
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const ADD_POST = 'ADD-POST';
+export const addPostActionCreator = () => {
+
+  return {
+    type: ADD_POST
+  }
+}
+export const updateNewPostTextActionCreator = (text: string) => {
+
+  return {
+    type: UPDATE_NEW_POST_TEXT,
+    newText: text
+  }
 }
