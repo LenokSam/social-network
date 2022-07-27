@@ -1,8 +1,6 @@
 import React, {ChangeEvent, LegacyRef, useState} from 'react';
 import s from './MyPosts.module.css'
 import {Post, PostType} from './Post/Post'
-import {useDispatch} from 'react-redux';
-import {addPostActionCreator} from '../../../redux/profileReducer';
 
 
 export type MyPostsType = {
@@ -13,9 +11,6 @@ export type MyPostsType = {
 }
 
 export const MyPosts: React.FC<MyPostsType> = ({posts, updateNewPostText, addPost, newPostText}) => {
-
-  let dispatch = useDispatch()
-  const [text, setText] = useState<string>(newPostText)
 
   const postsRender = posts.map(p => <Post
     date={p.date}
@@ -45,7 +40,6 @@ export const MyPosts: React.FC<MyPostsType> = ({posts, updateNewPostText, addPos
               onChange={onPostChange}
               value={newPostText}
             >
-
             </textarea></div>
           <div>
             <button onClick={onAddPost}> addPost</button>

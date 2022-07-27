@@ -8,6 +8,7 @@ import {StateType} from './redux/stateType';
 import {Dialogs} from './components/Dialogs/Dialogs';
 import store from './redux/store';
 import DialogsContainer from './components/Dialogs/DialogsContainer';
+import {MyPostsContainer} from './components/Profile/MyPosts/MyPostsContainer';
 
 
 type AppType = {
@@ -16,8 +17,7 @@ type AppType = {
 }
 
 function App() {
-  let storeApp = store.getState()
-  console.log(storeApp)
+
   return (
     <div className="app-wrapper">
       <Header/>
@@ -39,6 +39,10 @@ function App() {
         <Route
           path={'/messages'}
           render={() => <DialogsContainer/>}
+        />
+        <Route
+          path={'/profile'}
+          render={() => <MyPostsContainer/>}
         />
 
       </div>

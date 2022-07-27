@@ -17,7 +17,7 @@ export const ProfileIcon:React.FC<IconItemType> = ({className}) => {
 
 export const MessagesIcon:React.FC<IconItemType> = ({className}) => {
   return (
-    <svg className={className}  enable-background="new 0 0 40 40" id="Слой_1" version="1.1" viewBox="0 0 40 40"
+    <svg className={className}  enableBackground="new 0 0 40 40" id="Слой_1" version="1.1" viewBox="0 0 40 40"
          xmlns="http://www.w3.org/2000/svg">
       <g>
         <path
@@ -42,8 +42,8 @@ export const NewsIcon:React.FC<IconItemType> = ({className}) => {
   return (
     <svg  className={className}  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
          x="0px" y="0px"
-         width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M41,47L41,47H7l0,0c-2.762,0-5-2.238-5-5V2c0-0.552,0.447-1,1-1l0,0h34l0,0
+         width="48px" height="48px" viewBox="0 0 48 48" enableBackground="new 0 0 48 48">
+      <path fillRule="evenodd" clipRule="evenodd" d="M41,47L41,47H7l0,0c-2.762,0-5-2.238-5-5V2c0-0.552,0.447-1,1-1l0,0h34l0,0
 	c0.414,0,0.77,0.252,0.922,0.611C37.972,1.73,38,1.862,38,2v0v14h7c0.553,0,1,0.448,1,1v25C46,44.762,43.762,47,41,47z M36,42V3H4
 	v39l0,0l0,0c0,1.657,1.344,3,3,3h30.022C36.39,44.162,36,43.131,36,42z M44,18h-6v24c0,1.657,1.343,3,3,3s3-1.343,3-3V18z M7,40
 	c0-0.552,0.447-1,1-1h9c0.553,0,1,0.448,1,1c0,0.553-0.447,1-1,1H8C7.447,41,7,40.553,7,40z M11.666,23.715
@@ -107,7 +107,7 @@ export const SettingIcon:React.FC<IconItemType> = ({className}) => {
 };
 export const MusicIcon:React.FC<IconItemType> = ({className}) => {
   return (
-    <svg className={className}  enable-background="new 0 0 232 232" id="music" version="1.1" viewBox="0 0 232 232"
+    <svg className={className}  enableBackground="new 0 0 232 232" id="music" version="1.1" viewBox="0 0 232 232"
          xmlns="http://www.w3.org/2000/svg" >
       <g>
         <path

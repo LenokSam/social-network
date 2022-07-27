@@ -23,7 +23,6 @@ const addNewPost = () => {
    }
 }
 
-let dispatch = useDispatch()
 
   return (
     <div>
@@ -37,12 +36,7 @@ let dispatch = useDispatch()
           </div>
         </div>
       </div>
-      <MyPostsContainer
-        posts={profile.posts}
-        addPost={()=>{}}
-        updateNewPostText={(text)=>console.log(text)}
-        newPostText={''}
-      />
+      <MyPostsContainer/>
     </div>
   );
 };

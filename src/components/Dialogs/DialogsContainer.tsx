@@ -1,7 +1,4 @@
 import React, {ChangeEvent, useState} from 'react';
-import s from './Dialogs.module.css'
-import {Dialog, DialogItemType} from './Dialog/Dialog';
-import {MessagesDataType} from '../../redux/stateType';
 import {connect, useDispatch} from 'react-redux';
 import {sendMessageCreator, updateNewMessageBodyCreator} from '../../redux/dialogsReducer';
 import {Dialogs} from './Dialogs';
